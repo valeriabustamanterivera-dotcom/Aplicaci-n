@@ -1,0 +1,140 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+}
+
+header {
+    background-color: #f5c6e8;
+    padding: 1.25rem;
+    text-align: center;
+   
+
+}
+.header-brand{
+    display: flex;
+    justify-content: space-around;
+}
+
+.icono{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+
+header h1 {
+    color: #000000;
+    margin-bottom: 0.9375rem;
+    font-size: 1.5rem;
+}
+
+.search-bar {
+    width: 80%;
+    padding: 0.625rem;
+    border: none;
+    border-radius: 0.3125rem;
+    margin-bottom: 0.9375rem;
+    font-size: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #d97dbf;
+}
+
+.Maquillaje, .Edición.Limitada {
+    padding: 2.5rem 1.25rem;
+    text-align: center;
+}
+
+.Maquillaje h2, .Edición.Limitada h2 {
+    font-family: 'Adamina', serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #d97dbf;
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+.Maquillaje h2{
+    text-align: center;
+}
+.categoria-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+    justify-items: center;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+.categoria img, .producto img {
+    width: 7rem;  
+    height: 7rem; 
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+
+.categoria p {
+    margin-top: 0.625rem;
+    font-size: 0.875rem;
+    color: #000000;
+    font-weight: bold;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.producto p {
+    margin-top: 0.625rem;
+    font-size: 0.875rem;
+    color: #000000;
+}
+
+.producto span {
+    display: block;
+    color: #000000;
+    font-weight: bold;
+    margin-top: 0.3125rem;
+}
+
+footer {
+    background-color: #d97dbf;
+    color: white;
+    text-align: center;
+    padding: 1.25rem;
+    margin-top: 2.5rem;
+}
+
