@@ -7,6 +7,14 @@
         <title>MV Aura</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="manifest" href="manifest.json">
+        <script>
+        if ('serviceWorker' in navigator) {
+            // Registramos el archivo desde la raíz
+            navigator.serviceWorker.register('sw.js')
+                .then(() => console.log("SW registrado"))
+                .catch(err => console.log("Error en SW", err));
+        }
+    </script>
     </head>
     <body>
         <header>

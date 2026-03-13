@@ -1,20 +1,28 @@
-const CACHE_NAME = 'my-app-cache-v1';
-const urlsToCache = ['./' ,'./index.html', './styles.css'];
+const CACHE_NAME = 'mv-aura-cache-v1';
+
+const ASSETS = [
+  "./",
+  "./index.html",
+  "./styles.css",
+  "./app.js",
+  "./manifest.json"
+];
 
 self.addEventListener('install', event => {
-    event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then(cache => cache.addAll(urlsToCache))
-            .then(() => self.skipWaiting())
-    );
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => {
+        return cache.addAll(ASSETS);
+      })
+      .then(() => self.skipWaiting())
+  );
 });
 
-
-
-self.addEventListener('fetch', (event) => {
-    event.respondWith
+self.addEventListener('fetch', event => {
+  event.respondWith(
     caches.match(event.request)
-    .then((response) => { 
+      .then(response => {
         return response || fetch(event.request);
-    })
+      })
+  );
 });
